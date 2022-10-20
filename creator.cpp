@@ -52,6 +52,7 @@ void createMatrix()
             m[f][c] = 'X';
         }
 
+
     }
 
 }
