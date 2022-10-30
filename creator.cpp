@@ -18,7 +18,8 @@ void createVector()
         v[i] = i+1;
     }
 
-    for(int o = 0; o < longitudDelArray*1.5; ++o)
+// (1.2 + (rand()% 2))
+    for(int o = 0; o < longitudDelArray* (1.3 + (rand()% 2)); ++o)
     {
         for(int i = 0; i < longitudDelArray; ++i)
         {
@@ -28,7 +29,6 @@ void createVector()
             }
         }
     }
-
 }
 
 void createMatrix()

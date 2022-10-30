@@ -9,6 +9,8 @@ void loadStd(){
     cin >> longitudDelArray;
     cout << "Usar representacion grafica? " << endl << "1- Si"<< endl << "2- No" <<endl<<"[console]: ";
     cin >> useGraphic;
+     cout << "Ingrese el Delay a usar: ";
+    cin >> DELAY;
 
 }
 
@@ -17,6 +19,7 @@ void loadFile(){
     ifstream in("input.txt");
     in >> longitudDelArray;
     in >> useGraphic;
+    in >> DELAY;
 }
 
 void loader(){

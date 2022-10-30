@@ -2,6 +2,7 @@
 #define VARS_H_INCLUDED
 
 int longitudDelArray = 1;
+float DELAY;
 int metodo;
 int useGraphic;
 
