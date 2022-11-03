@@ -9,8 +9,7 @@ vector<long long> stats(3, 0);
 
 void delay(int secs)
 {
-    for (int i = (time(NULL) + secs); time(NULL) != i; time(NULL))
-        ;
+    for (int i = (time(NULL) + secs); time(NULL) != i; time(NULL));
 }
 
 void waitInput()
@@ -162,7 +161,7 @@ vector<int> insertionSort()
     return stats;
 }
 
-void quickSortAlgorithm(vector<int> a, int primero, int ultimo, vector<vector<char>> mToSort)
+void quickSortAlgorithm(vector<int> &a, int primero, int ultimo, vector<vector<char>> mToSort)
 {
 
     int i, j, central;
@@ -228,7 +227,7 @@ vector<int> quickSort()
 void sorter()
 {
     vector<int> stats(2);
-    /*stats = bubbleSort();
+    stats = bubbleSort();
     cout << "Bubble Sort finalizado." << endl
          << "Estadisticas: " << endl
          << "Comparaciones: " << stats[0] << endl
@@ -243,7 +242,7 @@ void sorter()
          << "Comparaciones: " << stats[0] << endl
          << "Accesos a memoria: " << stats[1] << endl;
 
-    waitInput();*/
+    waitInput();
 
     stats = quickSort();
     cout << "Quick sort finalizado." << endl
