@@ -24,7 +24,7 @@ void loadFile(){
 
 void loader(){
 
-    cout << "Que metodo de input vas a usar?" << endl << "1- entrada estandar (teclado)" << endl << "2- archivo de texto"<< endl <<"[console]: ";
+    cout << "Que metodo de input vas a usar?" << endl << "1- Entrada estandar (teclado)" << endl << "2- Archivo de texto"<< endl <<"[console]: ";
     cin >> metodo;
 
     switch(metodo){
