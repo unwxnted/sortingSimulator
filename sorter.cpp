@@ -9,7 +9,7 @@ vector<long long> stats(3, 0);
 
 void delay(int secs)
 {
-    for (int i = (time(NULL) + secs); time(NULL) != i; time(NULL));
+    sleep(secs);
 }
 
 void waitInput()
@@ -74,11 +74,11 @@ vector<int> bubbleSort()
     int accessToMemory = 0;
 
     clearConsole();
-    delay(DELAY);
+    sleep(DELAY);
     graphicMatrix(mToSort, toSort);
     cout << endl;
     graphicVector(toSort);
-    delay(DELAY);
+    sleep(DELAY);
     clearConsole();
 
     for (int i = 0; i < toSortSize - 1; i++)
@@ -93,7 +93,7 @@ vector<int> bubbleSort()
                 graphicMatrix(mToSort, toSort);
                 cout << endl;
                 graphicVector(toSort);
-                delay(DELAY);
+                sleep(DELAY);
                 clearConsole();
             }
         }
@@ -102,7 +102,7 @@ vector<int> bubbleSort()
     graphicMatrix(mToSort, toSort);
     cout << endl;
     graphicVector(toSort);
-    delay(DELAY);
+    sleep(DELAY);
 
     stats.push_back(comparations);
     stats.push_back(accessToMemory);
@@ -133,28 +133,29 @@ vector<int> insertionSort()
         pivot = toSort[i];
         accessToMemory++;
         k = i - 1;
+        graphicMatrix(mToSort, toSort);
+        cout << endl;
+        graphicVector(toSort);
 
         while (k >= 0 && toSort[k] > pivot)
         {
             comparations++;
             toSort[k + 1] = toSort[k];
-            graphicMatrix(mToSort, toSort);
             cout << endl;
-            graphicVector(toSort);
-            delay(DELAY);
-            clearConsole();
             accessToMemory += 2;
             k--;
         }
         toSort[k + 1] = pivot;
+        
+        delay(DELAY);
+        clearConsole();
         accessToMemory++;
     }
 
     graphicMatrix(mToSort, toSort);
-    delay(DELAY);
     cout << endl;
-
     graphicVector(toSort);
+    delay(DELAY);
 
     stats.push_back(comparations);
     stats.push_back(accessToMemory);
